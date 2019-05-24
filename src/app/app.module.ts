@@ -8,6 +8,7 @@ import { FavoritesPageComponent } from './favorites-page/favorites-page.componen
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {ApiService} from './api.service';
+import { SearchService } from './search.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {ApiService} from './api.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
