@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../search.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'search-criteria',
@@ -15,12 +17,15 @@ export class SearchCriteriaComponent implements OnInit {
     { name: "Alcohol-Free", value: "alcohol-free"}
   ];
 
-  constructor() { }
+  constructor(private search: SearchService, private router: Router) { }
 
   ngOnInit() {
   }
 
   searchRecipes(form) {
     console.log(form.value);
+    this.search.setOptions(form.value);
+
+    this.router.navigate(["recipe-list"]);
   }
 }
