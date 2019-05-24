@@ -23,5 +23,4 @@ export class SearchCriteriaComponent implements OnInit {
   searchRecipes(form) {
     console.log(form.value);
   }
-
 }
