@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: "", redirectTo: "/search", pathMatch: "full"},
+  {path: "search", component: SearchCriteriaComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

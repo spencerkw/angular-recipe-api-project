@@ -6,6 +6,7 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import {ApiService} from './api.service';
 
 @NgModule({
@@ -17,6 +18,7 @@ import {ApiService} from './api.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule
   ],

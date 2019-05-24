@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCriteriaComponent implements OnInit {
 
+  dietOptions: any[] = [
+    { name: "Vegan", value: "vegan" },
+    { name: "Vegetarian", value: "vegetarian" },
+    { name: "Peanut-Free", value: "peanut-free" },
+    { name: "Sugar-Conscious", value: "sugar-conscious"},
+    { name: "Alcohol-Free", value: "alcohol-free"}
+  ];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  searchRecipes(form) {
+    console.log(form.value);
   }
 
 }

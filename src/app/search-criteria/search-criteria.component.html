@@ -1,3 +1,14 @@
-<p>
-  search-criteria works!
-</p>
+<form #searchForm="ngForm" (ngSubmit)="searchRecipes(searchForm)">
+  <h4>Search for recipes</h4>
+  <input type="text" ngModel name="searchText" placeholder="Enter search text">
+  <select ngModel name="dietaryRestriction">
+    <option value="">Choose one...</option>
+    <option *ngFor="let option of dietOptions" [value]="option.value">{{option.name}}</option>
+  </select>
+  <div>
+    <label for="">Calories: </label>
+    <input type="text" name="minCalories" placeholder="min" ngModel> -
+    <input type="text" name="maxCalories" placeholder="max" ngModel>
+  </div>
+  <button>Search</button>
+</form>
