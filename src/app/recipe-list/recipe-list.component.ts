@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { SearchService } from "../search.service";
 
 @Component({
   selector: 'recipe-list',
@@ -8,10 +9,16 @@ import { ApiService } from '../api.service';
 })
 export class RecipeListComponent implements OnInit {
 
-  constructor(private api: ApiService) { }
+  recipeList: any[];
+
+  constructor(private api: ApiService, private search: SearchService) { }
 
   ngOnInit() {
-    this.api.getData("chicken").subscribe(response => {
+    this.getRecipes();
+  }
+
+  getRecipes() {
+    this.api.getData(this.search.getOptions()).subscribe(response => {
       console.log(response);
     });
   }

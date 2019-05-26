@@ -13,4 +13,8 @@ export class SearchService {
   setOptions(options: SearchOptions) {
     this.searchOptions = options;
   }
+
+  getOptions(): SearchOptions {
+    return this.searchOptions;
+  }
 }
