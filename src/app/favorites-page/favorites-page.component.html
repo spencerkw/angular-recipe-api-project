@@ -1,3 +1,6 @@
-<p>
-  favorites-page works!
-</p>
+<div class="component-container">
+  <h1>Favorites</h1>
+  <div class="recipe-list-container">
+    <recipe-card *ngFor="let recipe of favorites" [recipe]="recipe"></recipe-card>
+  </div>
+</div>
