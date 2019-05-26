@@ -9,18 +9,23 @@ import { SearchService } from "../search.service";
 })
 export class RecipeListComponent implements OnInit {
 
-  recipeList: any[];
+  recipeList: any[] = [];
 
-  constructor(private api: ApiService, private search: SearchService) { }
+  constructor(private search: SearchService) { }
 
   ngOnInit() {
     this.getRecipes();
   }
 
   getRecipes() {
-    this.api.getData(this.search.getOptions()).subscribe(response => {
-      console.log(response);
-    });
+    this.search.getSearchResults().subscribe(this.handleResponse);
+    console.log(this.recipeList);
+  }
+
+  private handleResponse = (response: any) => {
+    for (let hit of response["hits"]) {
+      this.recipeList.push(hit.recipe);
+    }
   }
 
 }
