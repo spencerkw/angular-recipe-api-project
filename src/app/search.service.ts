@@ -26,7 +26,7 @@ export class SearchService {
   getSearchResults(): Observable<Object> {
     if (this.searchResults === null) {
       this.searchOptions = {
-        searchText: ""
+        searchText: "tacos"
       }
       this.performSearch();
     }
