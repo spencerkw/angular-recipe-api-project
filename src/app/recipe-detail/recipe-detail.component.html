@@ -5,7 +5,7 @@
     <img src="{{recipe.image}}" alt="picture of {{recipe.label}}">
     <ul class="details-list">
       <li>Serves {{recipe.yield}}</li>
-      <li>Calories: {{recipe.calories.toFixed(0)}}</li>
+      <li>Calories per serving: {{(recipe.calories / recipe.yield).toFixed(0)}}</li>
       <li>Tags: 
         <span *ngFor="let tag of recipe.healthLabels; index as i"><span *ngIf="i !== 0">, </span>{{tag}}</span>
       </li>
