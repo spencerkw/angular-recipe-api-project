@@ -1,0 +1,12 @@
+.component-container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+p{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.favorites{
+    font-size:30px;
+}

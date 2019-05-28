@@ -33,8 +33,9 @@ div{
 button{
     background-color: #EE9521; 
     color: #9A4143;
-    width: 100px;
-    height:25px;
     border: none;
     box-shadow: 3px 3px 6px black;
+}
+input, button,select{
+    padding:5px;
 }

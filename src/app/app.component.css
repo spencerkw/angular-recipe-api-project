@@ -20,7 +20,7 @@ a{
     font-style:italic;
     color:white;
 }
-a:hover{
+a:hover, .active{
     color:#EE9521;
 }
 .main-container{
@@ -35,6 +35,3 @@ main{
     /* align-items:baseline; */
     width:65%;
 }
-
-
-

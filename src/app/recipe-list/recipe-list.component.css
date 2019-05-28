@@ -1,5 +1,12 @@
 .component-container{
     display:flex;
     justify-content: center;
-    margin-left: 35%;
+    flex-direction: column;
+}
+p{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.result{
+    font-size:30px;
 }
