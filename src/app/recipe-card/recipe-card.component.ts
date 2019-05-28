@@ -20,7 +20,7 @@ export class RecipeCardComponent implements OnInit {
   }
 
   toggleFavorite() {
-    if (this.favorites.favoritesContains(this.recipe)) {
+    if (this.favorites.contains(this.recipe)) {
       this.favorites.removeFavorite(this.recipe);
     } else {
       this.favorites.addFavorite(this.recipe);

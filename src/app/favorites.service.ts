@@ -25,7 +25,7 @@ export class FavoritesService {
     return this.favorites;
   }
 
-  favoritesContains(recipe: any) {
+  contains(recipe: any) {
     return this.favorites.includes(recipe);
   }
 }

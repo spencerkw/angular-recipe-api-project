@@ -1,7 +1,7 @@
 <div class="recipe-container" (click)="goToRecipeDetail()">
-    <i class="fas" [ngClass]="{'fa-trash': favorites.favoritesContains(recipe), 'fa-heart': !favorites.favoritesContains(recipe)}" (click)="toggleFavorite()"></i>
+    <i class="fas" [ngClass]="{'fa-trash': favorites.contains(recipe), 'fa-heart': !favorites.contains(recipe)}" (click)="toggleFavorite()"></i>
   
     <img src="{{recipe.image}}" alt="picture of {{recipe.label}}">
     <p>{{recipe.label}}</p>
     <p>Serves {{recipe.yield}}</p>
-  </div>
+</div>
