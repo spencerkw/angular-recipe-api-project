@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'recipe-card',
@@ -9,13 +10,13 @@ export class RecipeCardComponent implements OnInit {
 
   @Input() recipe: any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   goToRecipeDetail() {
-
+    this.router.navigate(["recipe", this.recipe.label]);
   }
 
 }

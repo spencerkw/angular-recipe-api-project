@@ -1,8 +1,8 @@
-<div class="recipe-container" (click)="goToRecipeDetail()">
+<div class="recipe-container">
     <i class="fas fa-heart"></i>
   
     
-    <img src="{{recipe.image}}" alt="picture of {{recipe.label}}">
+    <img src="{{recipe.image}}" alt="picture of {{recipe.label}}" (click)="goToRecipeDetail()">
     <p>{{recipe.label}}</p>
     <p>Serves {{recipe.yield}}</p>
   </div>
