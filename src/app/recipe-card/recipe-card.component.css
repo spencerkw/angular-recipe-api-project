@@ -10,7 +10,7 @@
     margin:10px;
     height:278px;
     width:161px;
-    
+    box-shadow: 3px 3px 6px black;
 }
 
 img{
@@ -21,12 +21,13 @@ img{
 
 p{
     color:white;
-    padding-left: 10px; 
+    padding-left: 10px;
+    font-family: 'Open Sans Condensed', sans-serif; 
 }
 .fa-heart{
     color:#EE9521;
     display: flex;
     justify-content: flex-end;
-    transform: translate(3%,-58%);
-    size:9x;
+    transform: translate(7%,-47%);
+    font-size:30px;
 }

@@ -22,20 +22,23 @@ input, select{
     margin-bottom:10px;
     color:#9A4143;
     border:none;
+    box-shadow: 3px 3px 6px black;
 }
 div > input{
      width:63px;
+     box-shadow: 3px 3px 6px black;
 }
 div{
     display: flex;
     flex-direction: row;
 }
 button{
-    background-color: #64738D; 
+    background-color: #EE9521; 
     color: #9A4143;
     margin-bottom: 10px;
     width: 100px;
     height:25px;
-    transform: translate(278%,-130%);
+    transform: translate(273%,-119%);
     border: none;
+    box-shadow: 3px 3px 6px black;
 }
