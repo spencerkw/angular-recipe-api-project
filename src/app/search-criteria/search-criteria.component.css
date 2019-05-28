@@ -1,48 +1,51 @@
-div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-form{
-    background-color: rgb(154, 65, 67, 0.7);
-    border-radius: 10px;
-    font-family: 'Open Sans Condensed', sans-serif;
-    box-shadow: 3px 3px 6px black;
-    margin-top:35%;
+form {
+  background-color: rgb(154, 65, 67, 0.7);
+  border-radius: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  box-shadow: 3px 3px 6px black;
+  margin-top: 35%;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-    
-h4{
-    margin:9px;
+  
+h4,label,input,select, button {
+  color:white;
+  margin: 10px;
+  border-radius: 5px;
 }
-h4,label,input,select, button{
-    color:white;
-    margin: 10px;
-    border-radius: 5px;
+
+h4 {
+  margin:9px;
 }
-input, select{
-    width:180px;
-    color:#9A4143;
-    border:none;
-    box-shadow: 3px 3px 6px black;
+
+input, select {
+  width: 180px;
+  color: #9A4143;
+  border: none;
+  box-shadow: 3px 3px 6px black;
+  padding: 5px;
 }
+
 .calories-container {
-    flex: 1;
+  flex: 1;
 }
+
 .calories-container > input{
-     width:65px;
-     box-shadow: 3px 3px 6px black;
-}
-button{
-    background-color: #EE9521; 
-    color: #9A4143;
-    border: none;
+    width: 65px;
     box-shadow: 3px 3px 6px black;
-    padding: 5px 10px;
 }
-input, select{
-    padding:5px;
+
+button {
+  background-color: #EE9521; 
+  color: #9A4143;
+  border: none;
+  box-shadow: 3px 3px 6px black;
+  padding: 5px 10px;
 }

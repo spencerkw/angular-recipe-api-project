@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class SearchCriteriaComponent implements OnInit {
 
+  //diet options for the dropdown
   dietOptions: any[] = [
     { name: "Vegan", value: "vegan" },
     { name: "Vegetarian", value: "vegetarian" },
@@ -22,6 +23,7 @@ export class SearchCriteriaComponent implements OnInit {
   ngOnInit() {
   }
 
+  //trigger the search when the form is submitted
   searchRecipes(form) {
     console.log(form.value);
     this.search.setOptions(form.value);
