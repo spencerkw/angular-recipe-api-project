@@ -1,0 +1,32 @@
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
+.recipe-container{
+    background-color:#9A4143;
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    margin:10px;
+    height:278px;
+    width:161px;
+    
+}
+
+img{
+  width: 107px; 
+  border-radius: 10%  50%;
+  padding-left:21px;
+}
+
+p{
+    color:white;
+    padding-left: 10px; 
+}
+.fa-heart{
+    color:#EE9521;
+    display: flex;
+    justify-content: flex-end;
+    transform: translate(3%,-58%);
+    size:9x;
+}
