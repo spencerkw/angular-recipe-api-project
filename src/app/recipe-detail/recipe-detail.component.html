@@ -6,6 +6,8 @@
     <ul class="details-list">
       <li>Serves {{recipe.yield}}</li>
       <li>Calories per serving: {{(recipe.calories / recipe.yield).toFixed(0)}}</li>
+      <!-- Taglist is constructed via use of ngFor and ngIf on spans
+      Write the name of the tag for each one, and only add the preceding ", " if the tag isn't the first in the list -->
       <li>Tags: 
         <span *ngFor="let tag of recipe.healthLabels; index as i"><span *ngIf="i !== 0">, </span>{{tag}}</span>
       </li>
