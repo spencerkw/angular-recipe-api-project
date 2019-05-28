@@ -4,7 +4,7 @@ p{
 }
 .details-container{
     border-radius: 10px;
-    background-color: #9A4143;
+    background-color:rgb(154, 65, 67, 0.7);;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,7 +1,7 @@
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
 .recipe-container{
-    background-color:#9A4143;
+    background-color:rgb(154, 65, 67, 0.7);;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
