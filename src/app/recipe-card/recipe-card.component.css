@@ -29,4 +29,5 @@ p{
     justify-content: flex-end;
     transform: translate(3%,-58%);
     size:9x;
+    cursor: pointer; 
 }
