@@ -10,7 +10,8 @@ const routes: Routes = [
   {path: "search", component: SearchCriteriaComponent},
   {path: "recipe-list", component: RecipeListComponent},
   {path: "favorites", component: FavoritesPageComponent},
-  {path: "recipe/:name", component: RecipeDetailComponent}
+  {path: "recipe/:name", component: RecipeDetailComponent},
+  {path: "**", redirectTo: "/search"}
 ];
 
 @NgModule({
