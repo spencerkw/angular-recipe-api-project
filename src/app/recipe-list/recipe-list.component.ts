@@ -17,7 +17,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   getRecipes() {
-    this.search.getSearchResults().subscribe(this.handleResponse);
+    this.recipeList = this.search.getSearchResults();
     console.log(this.recipeList);
   }
 
