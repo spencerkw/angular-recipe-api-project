@@ -23,10 +23,9 @@ p{
     color:white;
     padding-left: 10px; 
 }
-.fa-heart{
+.fas{
     color:#EE9521;
     display: flex;
     justify-content: flex-end;
     transform: translate(3%,-58%);
-    size:9x;
 }
