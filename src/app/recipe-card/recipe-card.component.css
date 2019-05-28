@@ -3,15 +3,27 @@
 .recipe-container{
     background-color:rgb(154, 65, 67, 0.7);;
     border-radius: 5px;
+    margin: 10px;
+    height: 280px;
+    width: 160px;
+    box-shadow: 3px 3px 6px black;
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: space-around;
-    margin:10px;
-    height:280px;
-    width:160px;
-    box-shadow: 3px 3px 6px black;
-    position: relative;
+}
+
+.fas {
+    font-size: 25px;
+    color:#EE9521;
+    cursor: pointer; 
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -25%);
 }
 
 img{
@@ -22,21 +34,8 @@ img{
 }
 
 p{
-    color:white;
-    margin: 10px;
-    /* padding-left: 10px; */
-    font-family: 'Open Sans Condensed', sans-serif; 
-}
-.fas{
-    font-size: 25px;
-    color:#EE9521;
-    /* display: flex;
-    justify-content: flex-end; */
-    /* transform: translate(3%,-58%); */
-    cursor: pointer; 
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -25%);
+  color:white;
+  margin: 10px;
+  /* padding-left: 10px; */
+  font-family: 'Open Sans Condensed', sans-serif 
 }
