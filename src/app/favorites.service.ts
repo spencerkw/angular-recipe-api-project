@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class FavoritesService {
 
-  private favorites: any[]; //favorite recipes
+  private favorites: any[] = []; //favorite recipes
 
   constructor() { }
 
@@ -14,12 +14,18 @@ export class FavoritesService {
     return this.favorites;
   }
 
-  removeFavorite(index: number): any[] {
+  removeFavorite(recipe: any): any[] {
+    let index = this.favorites.findIndex(favorite =>
+      favorite.label.toLowerCase() === recipe.label.toLowerCase());
     this.favorites.splice(index, 1);
     return this.favorites;
   }
 
   getFavorites(): any[] {
     return this.favorites;
+  }
+
+  contains(recipe: any) {
+    return this.favorites.includes(recipe);
   }
 }
