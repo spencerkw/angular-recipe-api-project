@@ -3,7 +3,9 @@
 html{
     margin:0;
     padding:0px;
-    background: url(src\app\images\background-image.png) no-repeat center center fixed;
+    background: url(src\app\images\background-image.png) fixed;
+    background-repeat: no-repeat;
+    background-position: top 0 right 0;
     background-size: cover;
-    }
+}
     
