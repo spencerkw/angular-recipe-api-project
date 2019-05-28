@@ -7,21 +7,23 @@ header, nav{
     color:white;
 }
 
-p{
+.site-title {
     flex-basis: 55%;
     font-size:40px;
     font-weight: 600;
     /* font-style: italic; */
     margin:0px;
 }
-a{
+a {
+    color:inherit;
+    text-decoration: none;
+}
+nav a {
     font-size:30px;
     padding-right: 20px;
     /* font-style:italic; */
-    color:white;
-    text-decoration: none;
 }
-a:hover, .active{
+nav a:hover, .active{
     color:#EE9521;
 }
 .main-container{
