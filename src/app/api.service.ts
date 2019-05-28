@@ -42,7 +42,7 @@ export class ApiService {
       searchUrl += caloriesUrl; //append the calorie part to the URL
     }
 
-    console.log(searchUrl);
+    //console.log(searchUrl);
 
     return this.http.get(searchUrl); //return the request
   }

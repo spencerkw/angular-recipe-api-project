@@ -25,7 +25,7 @@ export class SearchCriteriaComponent implements OnInit {
 
   //trigger the search when the form is submitted
   searchRecipes(form) {
-    console.log(form.value);
+    //console.log(form.value);
     this.search.setOptions(form.value);
 
     this.router.navigate(["recipe-list"]);

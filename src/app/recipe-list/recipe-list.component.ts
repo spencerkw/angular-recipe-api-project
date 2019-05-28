@@ -19,7 +19,7 @@ export class RecipeListComponent implements OnInit {
   //get the search results from the search service
   getRecipes() {
     this.recipeList = this.search.getSearchResults();
-    console.log(this.recipeList);
+    //console.log(this.recipeList);
   }
 
   // old code from when this used the observable
