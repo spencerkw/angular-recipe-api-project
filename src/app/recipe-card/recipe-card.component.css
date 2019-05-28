@@ -28,6 +28,6 @@ p{
     color:#EE9521;
     display: flex;
     justify-content: flex-end;
-    transform: translate(7%,-47%);
-    font-size:30px;
+    transform: translate(3%,-58%);
+    cursor: pointer; 
 }
