@@ -1,3 +1,8 @@
+div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 form{
     background-color: #9A4143;
@@ -5,6 +10,9 @@ form{
     font-family: 'Open Sans Condensed', sans-serif;
     box-shadow: 3px 3px 6px black;
     margin-top:35%;
+
+    display: flex;
+    flex-direction: column;
 }
     
 h4{
@@ -21,21 +29,20 @@ input, select{
     border:none;
     box-shadow: 3px 3px 6px black;
 }
-div > input{
-     width:63px;
-     box-shadow: 3px 3px 6px black;
+.calories-container {
+    flex: 1;
 }
-div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.calories-container > input{
+     width:65px;
+     box-shadow: 3px 3px 6px black;
 }
 button{
     background-color: #EE9521; 
     color: #9A4143;
     border: none;
     box-shadow: 3px 3px 6px black;
+    padding: 5px 10px;
 }
-input, button,select{
+input, select{
     padding:5px;
 }
