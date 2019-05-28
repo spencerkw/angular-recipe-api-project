@@ -13,6 +13,7 @@ export class FavoritesPageComponent implements OnInit {
   constructor(private favoritesService: FavoritesService) { }
 
   ngOnInit() {
+    //get the favorites when the page loads
     this.favorites = this.favoritesService.getFavorites();
   }
 
