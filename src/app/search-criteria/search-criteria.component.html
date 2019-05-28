@@ -1,15 +1,16 @@
-
-<form #searchForm="ngForm" (ngSubmit)="searchRecipes(searchForm)">
-  <h4>What are you hungry for?</h4>
-  <input type="text" ngModel name="searchText" placeholder="Enter search text">
-  <select ngModel name="dietaryRestriction">
-    <option value="">Choose one...</option>
-    <option *ngFor="let option of dietOptions" [value]="option.value">{{option.name}}</option>
-  </select>
-  <div>
-    <label for="">Calories: </label>
-    <input type="number" name="minCalories" placeholder="min" ngModel>
-    <input type="number" name="maxCalories" placeholder="max" ngModel>
-  </div>
-  <button>Search</button>
-</form>
+<div class="form-container">
+  <form #searchForm="ngForm" (ngSubmit)="searchRecipes(searchForm)">
+    <h4>What are you hungry for?</h4>
+    <input type="text" ngModel name="searchText" placeholder="Enter search text">
+    <select ngModel name="dietaryRestriction">
+      <option value="">Choose one...</option>
+      <option *ngFor="let option of dietOptions" [value]="option.value">{{option.name}}</option>
+    </select>
+    <div>
+      <label for="">Calories: </label>
+      <input type="number" name="minCalories" placeholder="min" ngModel>
+      <input type="number" name="maxCalories" placeholder="max" ngModel>
+      <button>Search</button>
+    </div>
+  </form>
+</div>
