@@ -11,6 +11,7 @@ import {ApiService} from './api.service';
 import { SearchService } from './search.service';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { FavoritesService } from './favorites.service';
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FavoritesService } from './favorites.service';
     SearchCriteriaComponent,
     RecipeListComponent,
     FavoritesPageComponent,
-    RecipeCardComponent
+    RecipeCardComponent,
+    RecipeDetailComponent
   ],
   imports: [
     BrowserModule,

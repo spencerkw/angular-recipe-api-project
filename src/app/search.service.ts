@@ -9,13 +9,13 @@ import { Observable } from 'rxjs';
 export class SearchService {
 
   private searchOptions: SearchOptions;
-  private searchResults: Observable<Object> = null;
+  private searchResults: any[] = [];
 
   constructor(private api: ApiService) { }
 
   setOptions(options: SearchOptions) {
     this.searchOptions = options;
-    this.searchResults = null; //clear it before getting new results
+    this.searchResults = []; //clear it before getting new results
     this.performSearch();
   }
 
@@ -23,23 +23,27 @@ export class SearchService {
     return this.searchOptions;
   }
 
-  getSearchResults(): Observable<Object> {
-    if (this.searchResults === null) {
-      this.searchOptions = {
-        searchText: "tacos"
-      }
-      this.performSearch();
-    }
+  getSearchResults(): any[] {
+    // if (this.searchResults.length === 0) {
+    //   this.searchOptions = {
+    //     searchText: "tacos"
+    //   }
+    //   this.performSearch();
+    // }
     return this.searchResults;
   }
 
-  private performSearch(): void {
-    this.searchResults = this.api.getData(this.searchOptions);
+  getRecipe(name: string): any {
+    return this.searchResults.find(recipe => recipe.label.toLowerCase() === name.toLowerCase())
   }
 
-  // private handleResponse(response: any): void {
-  //   for (let hit of response["hits"]) {
-  //     this.searchResults.push(hit.recipe);
-  //   }
-  // }
+  private performSearch(): void {
+    this.api.getData(this.searchOptions).subscribe(this.handleResponse);
+  }
+
+  private handleResponse = (response: any): void => {
+    for (let hit of response["hits"]) {
+      this.searchResults.push(hit.recipe);
+    }
+  }
 }
