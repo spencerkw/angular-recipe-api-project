@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import {ApiService} from './api.service';
 import { SearchService } from './search.service';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
+import { FavoritesService } from './favorites.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { RecipeCardComponent } from './recipe-card/recipe-card.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ApiService, SearchService],
+  providers: [ApiService, SearchService, FavoritesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
