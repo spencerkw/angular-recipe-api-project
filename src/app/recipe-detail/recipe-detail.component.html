@@ -7,8 +7,7 @@
       <li>Serves {{recipe.yield}}</li>
       <li>Calories: {{recipe.calories.toFixed(0)}}</li>
       <li>Tags: 
-        <span *ngIf="recipe.healthLabels.length !== 0">{{recipe.healthLabels[0]}}</span>
-        <span *ngFor="let tag of recipe.healthLabels">, {{tag}}</span>
+        <span *ngFor="let tag of recipe.healthLabels; index as i"><span *ngIf="i !== 0">, </span>{{tag}}</span>
       </li>
       <li><a href="{{recipe.url}}">Original Recipe</a></li>
     </ul>
