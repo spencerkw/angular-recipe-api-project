@@ -8,13 +8,21 @@ import { FavoritesService } from '../favorites.service';
 })
 export class FavoritesPageComponent implements OnInit {
 
-  favorites: any[];
+  favorites: any[] = [];
 
   constructor(private favoritesService: FavoritesService) { }
 
   ngOnInit() {
     //get the favorites when the page loads
     this.favorites = this.favoritesService.getFavorites();
+  }
+
+  addFavorite(recipe: any): void {
+    this.favorites = this.favoritesService.addFavorite(recipe);
+  }
+
+  removeFavorite(recipe: any): void {
+    this.favorites = this.favoritesService.removeFavorite(recipe);
   }
 
 }

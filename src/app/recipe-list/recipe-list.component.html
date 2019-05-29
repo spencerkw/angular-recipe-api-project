@@ -2,6 +2,9 @@
   <p class="result">Results</p>
   <p *ngIf="recipeList.length === 0">Nothing found :(</p>
   <div class="recipe-list-container">
-    <recipe-card *ngFor="let recipe of recipeList" [recipe]="recipe"></recipe-card>
+    <recipe-card *ngFor="let recipe of recipeList"
+      [recipe]="recipe"
+      (onAddFavorite)="addFavorite($event)"
+      (onRemoveFavorite)="removeFavorite($event)"></recipe-card>
   </div>
 </div>

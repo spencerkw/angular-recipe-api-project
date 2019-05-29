@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SearchOptions } from './search-options';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getData(options: SearchOptions) {
+  getData(options: SearchOptions): Observable<Object> {
     //base URL to use for searches
     let searchUrl = this.apiUrl + `?q=${options.searchText}&app_id=${this.appid}&app_key=${this.apikey}&to=25`;
 

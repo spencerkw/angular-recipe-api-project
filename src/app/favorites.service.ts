@@ -11,7 +11,8 @@ export class FavoritesService {
 
   //add the given recipe to the favorites
   addFavorite(recipe: any): any[] {
-    this.favorites.push(recipe);
+    this.favorites = [...this.favorites, {...recipe}];
+    //this.favorites.push(recipe);
     return this.favorites;
   }
 
@@ -19,7 +20,8 @@ export class FavoritesService {
   removeFavorite(recipe: any): any[] {
     let index = this.favorites.findIndex(favorite =>
       favorite.label.toLowerCase() === recipe.label.toLowerCase());
-    this.favorites.splice(index, 1);
+    this.favorites = [...this.favorites.slice(0, index), ...this.favorites.slice(index+1)];
+    //this.favorites.splice(index, 1);
     return this.favorites;
   }
 

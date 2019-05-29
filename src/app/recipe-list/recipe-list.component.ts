@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from "../search.service";
+import { FavoritesService } from '../favorites.service';
 
 @Component({
   selector: 'recipe-list',
@@ -10,7 +11,7 @@ export class RecipeListComponent implements OnInit {
 
   recipeList: any[] = []; //the list of recipes being displayed
 
-  constructor(private search: SearchService) { }
+  constructor(private search: SearchService, private favorites: FavoritesService) { }
 
   ngOnInit() {
     this.getRecipes(); //get the recipes when it loads
@@ -20,6 +21,14 @@ export class RecipeListComponent implements OnInit {
   getRecipes() {
     this.recipeList = this.search.getSearchResults();
     //console.log(this.recipeList);
+  }
+
+  addFavorite(recipe: any): void {
+    this.favorites.addFavorite(recipe);
+  }
+
+  removeFavorite(recipe: any): void {
+    this.favorites.removeFavorite(recipe);
   }
 
   // old code from when this used the observable

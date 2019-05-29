@@ -43,7 +43,7 @@ export class SearchService {
   //handler for getting the data from the observable
   private handleResponse = (response: any): void => {
     for (let hit of response["hits"]) {
-      this.searchResults.push(hit.recipe);
+      this.searchResults.push({...hit.recipe});
     }
   }
 }
