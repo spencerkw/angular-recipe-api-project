@@ -11,7 +11,7 @@ export class FavoritesService {
 
   //add the given recipe to the favorites
   addFavorite(recipe: any): any[] {
-    this.favorites = [...this.favorites, {...recipe}];
+    this.favorites = [...this.favorites, recipe];
     //this.favorites.push(recipe);
     return this.favorites;
   }
